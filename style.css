@@ -1,0 +1,140 @@
+/* 1. Add this at the very top! It stops elements from breaking the screen width */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1eefc;
+    color: #eeece8;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.game {
+    /* Change display to block so it can use 'width' properly */
+    display: block;
+    margin-top: 20px; /* Reduced top margin from 100px for mobile */
+    background: #a73ed8;
+    color: #eeece8; /* Keep the light text inside the purple box */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px; /* Limits size on desktop */
+    width: 95%; /* Makes it responsive on smaller screens */
+    margin: 0 auto;   /* Centers the game on the page */
+    text-align: center;
+}
+
+/* 2. Responsive Buttons */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    flex: 1 1 120px; /* Allows buttons to grow and shrink */
+    font-size: 1.1rem;
+    padding: 15px;
+    color: #070981;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* This ensures buttons take up space but wrap on small screens */
+    min-width: 120px;
+    transition: 0.3s;
+}
+
+/* 3. Responsive Table Wrapper */
+/* Add this wrapper in your HTML around the <table> tag */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Enables side-scrolling for the table on phones */
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+button:hover {
+    background: #4caf50;
+    color: white;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.animation-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.win-gif {
+    width: 150px; /* Adjust size to fit your design */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    
+    /* This makes it "pop" into view */
+    animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    80% { transform: scale(1.1); } /* Slight overshoot for bounce */
+    100% { transform: scale(1); opacity: 1; }
+}
+table {
+    width: 100%;
+    font-size: 14px; /* Slightly smaller text for mobile */
+    border-collapse: collapse;
+    min-width: 400px; /* Prevents columns from squishing too much */
+}
+
+/* 4. MEDIA QUERY: Specific changes for phones (screens under 600px) */
+@media (max-width: 600px) {
+    .game {
+        margin-top: 10px;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button[name="choice"] {
+        width: 100%; /* Stack buttons vertically on very small phones */
+        margin: 5px 0;
+    }
+
+    /* Make the table scrollable horizontally if it's too wide */
+    table {
+        display: table;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .fact-box {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+}
+
+.fact-box {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    border-left: 5px solid #ffeb3b; /* A bright yellow highlight */
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 8px;
+    max-width: 90%; /* Keeps it from hitting the edges on phones */
+    font-size: 0.95rem;
+    line-height: 1.4;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
