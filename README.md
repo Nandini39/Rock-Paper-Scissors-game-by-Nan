@@ -28,5 +28,3 @@ To play this game locally, you need a local server environment like **XAMPP**.
 ### 4. Play the Game
 * Open your browser and go to: `http://localhost/rps_game/index.php`
 
-### 4. Play the Game
-* Open your browser and go to: `http://localhost/rps_game/index.php`
