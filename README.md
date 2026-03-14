@@ -1,6 +1,6 @@
 # Rock Paper Scissors Game (PHP)
 
-This is a web-based game built with PHP, CSS, and MySQL.
+This is a web-based game built with PHP, HTML, CSS, and MySQL.
 
 ## 🚀 How to Run on a device
 
