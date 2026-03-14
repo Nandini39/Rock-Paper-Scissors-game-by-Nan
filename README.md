@@ -2,7 +2,7 @@
 
 This is a web-based game built with PHP, CSS, and MySQL.
 
-## 🚀 How to Run on a New Laptop
+## 🚀 How to Run on a device
 
 To play this game locally, you need a local server environment like **XAMPP**.
 
