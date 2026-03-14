@@ -15,7 +15,7 @@ To play this game locally, you need a local server environment like **XAMPP**.
 * Open XAMPP Control Panel and start **Apache** and **MySQL**.
 * Go to [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/).
 * Create a new database named **rps_game**.
-* Click on your new database, go to the **Import** tab, and select the `database.sql` file from this project.
+* Click on your new database, go to the **Import** tab, and select the `rps_game.sql` file from this project.
 * Click **Go** at the bottom.
 
 ### 3. Connection Settings
